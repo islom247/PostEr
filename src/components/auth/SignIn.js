@@ -14,10 +14,14 @@ class SignIn extends Component {
   };
   handleSubmit = event => {
     event.preventDefault();
-    console.log(this.state);
-    event.target.reset();
+    this.props.signIn(this.state);
+    const {authError} = this.props;
+
+    // to reset the form if need be, uncomment the line below
+    //event.target.reset();
   };
   render() {
+    const {authError} = this.props;
     return (
       <div className="container">
         <form onSubmit={this.handleSubmit} className="white" autoComplete="off">
@@ -32,15 +36,23 @@ class SignIn extends Component {
           </div>
           <div className="input-field">
             <button className="btn pink lighten-1 z-depth-0">Log In</button>
+            <div className="red-text center">
+            {authError ? <p>{authError}</p> : null}
+            </div>
           </div>
         </form>
       </div>
     );
   }
 }
-const mapDispatchToProps = (dispatch) => {
+const mapStateToProps = (state) => {
   return {
-
+    authError: state.auth.authError
   }
 }
-export default connect(mapDispatchToProps)(SignIn);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    signIn: (creds) => dispatch(signIn(creds))
+  }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(SignIn);
