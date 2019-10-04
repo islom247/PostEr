@@ -16,12 +16,14 @@ class CreateProject extends Component {
   handleSubmit = event => {
     event.preventDefault();
     this.props.createProject(this.state);
-    event.target.reset();
+    // to reset the form if need be, uncomment the line below
+    //event.target.reset();
+    this.props.history.push("/");
   };
   render() {
-    const {auth} = this.props;
+    const { auth } = this.props;
     if (!auth.uid) {
-      return <Redirect to="/signin"/>;
+      return <Redirect to="/signin" />;
     }
     return (
       <div className="container">
@@ -47,11 +49,11 @@ class CreateProject extends Component {
     );
   }
 }
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     auth: state.firebase.auth
-  }
-}
+  };
+};
 const mapDispatchToProps = dispatch => {
   return {
     createProject: project => dispatch(createProject(project))

@@ -4,7 +4,9 @@ const ProjectSummary = ({ project }) => {
     <div className="card z-depth-0">
       <div className="card-content grey-text text-darken-3">
         <span className="card-title ">{project.title}</span>
-        <p>Posted by NN</p>
+        <p>
+          Posted by {project.authorFirstName} {project.authorLastName}
+        </p>
         <p className="grey-text">21st September 22:56</p>
       </div>
     </div>
