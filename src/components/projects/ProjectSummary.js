@@ -12,7 +12,7 @@ const ProjectSummary = ({ project }) => {
         <p className="grey-text">
           {project.createdAt
             ? moment(project.createdAt.toDate()).calendar()
-            : null}
+            : "Post date undefined"}
         </p>
       </div>
     </div>
