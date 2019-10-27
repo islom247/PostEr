@@ -24,7 +24,7 @@ const ProjectDetails = props => {
             </div>
             <div>
               {project.createdAt
-                ? moment(project.createdAt.toDate()).calendar()
+                ? moment(project.createdAt.toDate()).format('MMMM Do YYYY, h:mm:ss a')
                 : "Post date undefined"}
             </div>
           </div>
