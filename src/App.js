@@ -6,7 +6,7 @@ import ProjectDetails from "./components/projects/ProjectDetails";
 import CreateProject from "./components/projects/CreateProject";
 import SignIn from "./components/auth/SignIn";
 import SignUp from "./components/auth/SignUp";
-
+//some random comment
 class App extends Component {
   render() {
     return (
