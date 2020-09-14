@@ -12,10 +12,10 @@ const Navbar = props => {
     <SignedOutLinks />
   );
   return (
-    <nav className="nav-wrapper grey darken-3">
+    <nav className="nav-wrapper  purple darken-4">
       <div className="container">
         <Link to="/" className="brand-logo">
-          MarioPlan
+          PostEr
         </Link>
         {links}
       </div>
