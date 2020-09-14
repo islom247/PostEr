@@ -4,8 +4,9 @@ experiences, confessions and whatever else that comes to your mind in text forma
 (Kinda reminds you of twitter ngl)<br/>
 There is a catch though: ***You can see everyone's posts*** (*But hey, you can operate anonymously too*)
 ### Motivation ###
-I created this application for learning React & Redux and<br/>
-while doing so I also wanted to create something meaningful and fun.
+I created this application for learning **React&Redux** and<br/>
+while doing so I also wanted to create something meaningful and fun.<br/>
+Along the way I also had the opportunity to gain some knowledge about **Firebase**.
 
 ### The following tools and technologies were used to create the application:  ###
 * **React and Redux**  for front-end  
