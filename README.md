@@ -1,5 +1,5 @@
 # react-firebase-tutorial
-Simple project(plan) sharing web application built using:  
+Simple post sharing web application built using:  
 -React and Redux for front-end  
 -Cloud Firestore for database (back-end)  
 -Firebase for cloud functions and deployment (back-end)  
