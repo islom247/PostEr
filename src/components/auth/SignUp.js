@@ -17,7 +17,6 @@ class SignUp extends Component {
   };
   handleSubmit = event => {
     event.preventDefault();
-    console.log("state is", this.state);
     this.props.signUp(this.state);
     // to reset the form if need be, uncomment the line below
     //event.target.reset();
